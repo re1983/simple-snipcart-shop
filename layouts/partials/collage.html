@@ -1,13 +1,23 @@
 <section>
   <div class="collage">
     <div class="collage-overlay">
+      
       <div class="collage-overlay-text">
+        
         <h1>{{ .Site.Params.header }}</h1>
-        <p><strong>{{ .Site.Params.Description }}</strong></p>
+        <!-- <h1>Carrying Your Keys to the World</h1> -->
+        <!-- <h1>Wirelessly, Ergonomic, Free.</h1> -->
+        <h1>KeyBorne | Split the Limits, Type Beyond</h1>
+        <!-- <p><strong>{{ .Site.Params.Description }}</strong></p> -->
+        <p><strong>Carrying Your Keys to the World - Wirelessly, Ergonomic, Free.</strong></p>
       </div>
+      
     </div>
+    
     {{ range .Site.Params.collage }}
-      <img src="{{ . | relURL }} " alt="collage image" />
+      <img src="{{ . | relURL }} " alt="collage image"/>
     {{ end }}
+    
+
   </div>
 </section>

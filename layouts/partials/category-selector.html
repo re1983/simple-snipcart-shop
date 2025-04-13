@@ -1,6 +1,12 @@
 <div class="category-wrapper container">
-  {{ $all := "All" }}
-  {{ range slice $all| append .Site.Params.Categories }}
-  <a class="btn" href="{{ if (eq . $all)}}/{{else}} /categories/{{ . | urlize }}{{end}}">{{ . }}</a>
+  <!-- 第一個按鈕：寄信 -->
+  <a class="btn" href="mailto:your-email@example.com">Email to us</a>
+  <a class="btn" href="mailto:your-email@example.com">Order</a>
+  <!-- 第二個按鈕：自訂功能 -->
+  <a class="btn" href="/about-us">About Us</a>
+
+  <!-- 保留分類按鈕 -->
+  {{ range .Site.Params.Categories }}
+  <a class="btn" href="/categories/{{ . | urlize }}">{{ . }}</a>
   {{ end }}
 </div>
