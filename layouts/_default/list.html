@@ -6,8 +6,10 @@
       {{ partial "category-selector" . }}
       <div class="container">
         <div class="products flex-grid">
-          {{ range .Pages.ByDate }}
-            {{ partial "product.html" .Params }}
+          {{ range .Pages }}
+            {{ if .Params.price }}
+              {{ partial "product.html" .Params }}
+            {{ end }}
           {{ end }}
         </div>
       </div>
