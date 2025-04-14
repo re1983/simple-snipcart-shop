@@ -191,7 +191,7 @@ a.btn {
   }
 
   @include media('<=sm') {
-    column-count: 2;
+    column-count: 1;
     h1 {
       line-height: 1.15;
       font-size: 3rem;
