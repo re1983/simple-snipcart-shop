@@ -350,6 +350,13 @@ $product-br: 6px;
   }
 }
 
+.content img {
+  max-width: 96%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
 // .about-us {
 //   padding: 2rem 0;
 //   text-align: center;
