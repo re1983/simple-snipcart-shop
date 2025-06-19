@@ -11,39 +11,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    {{ "<!--Favicon-->" | safeHTML }}
-
-    {{ if isset .Site.Params "special_favicon" }}
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="{{ .Site.Params.special_favicon.apple_touch }}"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="{{ .Site.Params.special_favicon.fav32 }}"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="{{ .Site.Params.special_favicon.fav16 }}"
-      />
-      <link rel="manifest" href="{{ .Site.Params.special_favicon.manifest }}" />
-      <link
-        rel="mask-icon"
-        href="{{ .Site.Params.special_favicon.mask_icon }}"
-        color="{{ .Site.Params.special_favicon.mask_icon_color }}"
-      />
-      <meta
-        name="theme-color"
-        content="{{ .Site.Params.special_favicon.theme_color }}"
-      />
-      {{ else }}
-      <link rel="icon" type="image/png" href="{{ .Site.Params.favicon }}" />
-    {{ end }}
+    {{ "<!-- Favicon & App Icons -->" | safeHTML }}
+    <!-- 主要 favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="manifest" href="/images/site.webmanifest" />
+    
+    <!-- 社交分享预览图 -->
+    <meta property="og:image" content="/images/icon.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="/images/icon.png">
 
     <title>{{ .Site.Title }}</title>
     {{ with .Site.Params.description }}
@@ -52,6 +35,8 @@
     {{ with .Site.Params.author }}
       <meta name="author" content="{{ . }}"
     />{{ end }}
+
+    {{ "<!-- 删除原有的条件判断块，避免覆盖 -->" | safeHTML }}
 
     <link
       rel="stylesheet"
