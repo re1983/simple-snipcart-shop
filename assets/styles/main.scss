@@ -12,6 +12,8 @@ $black: #01050d;
 $light-green: #8db38bff;
 $medium-green: #56876dff;
 $dark-green: #04724dff;
+$matrix-green: #39FF14; // Matrix green for the background
+$purple: #C600EB;
 
 $collage-image-size: 300px;
 
@@ -129,16 +131,16 @@ footer {
 }
 
 a.btn {
-  color: $black;
+  color: $light-green;
   padding: 20px;
-  border: 4px solid $black;
+  border: 4px solid $light-green;
   border-radius: 6px;
   transition: all 0.3s ease 0s;
   @include media('>=md') {
     &:hover {
-      color: $medium-green;
+      color: $matrix-green;
       border-radius: 50px;
-      border-color: $medium-green;
+      border-color: $matrix-green;
       transition: all 0.3s ease 0s;
     }
   }
@@ -160,6 +162,7 @@ a.btn {
     width: 100%  !important;
     height: 100%;
     object-fit: cover;
+    opacity: 1.0;
     // object-position: center center;
   }
 
