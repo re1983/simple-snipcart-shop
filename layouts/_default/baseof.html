@@ -58,12 +58,6 @@
   <body>
     {{ partial "header" . }}
     <div style="position:relative;">
-      <div style="position:absolute; top:0; left:0; width:100vw; height:100%; z-index:0; pointer-events:none;">
-        <iframe 
-          src="https://rezmason.github.io/matrix/?effect=stripes&stripeColors=1,0.8,0,0.6,0.6,0.6,0.2,0.6,1&bloomSize=0.4&bloomStrength=0.3&cursorIntensity=0.7&cycleSpeed=0.01&fallSpeed=0.2&font=matrixcode&skipIntro=false&numColumns=83" 
-          style="width:100vw; height:100%; border:none; display:block; pointer-events:none;">
-        </iframe>
-      </div>
       <div style="position:relative; z-index:1;">
         {{ block "main" . }}{{ end }}
       </div>
